@@ -45,7 +45,10 @@ def get_image(): #gets the final image to be used by the rest of the program.
         temp = read_camera()
     log("Getting\nimage...")
     camera_capture = read_camera()
-    file = "/home/pi/frc.png" #This is what needs to be changed to ram later,
+    #file = "/home/pi/frc.png" #This is what needs to be changed to ram later,
                               #having all the writes to the SD card can cause it
                               #to fail after a while.
-    cv2.imwrite(file, camera_capture)
+    #cv2.imwrite(file, camera_capture)
+    retval, img = camera_capture #Change the return value to the image,
+                                 #rather then creating another file each time.
+    return img #return the image
