@@ -13,7 +13,7 @@ This code is for the raspberry pi, which is being used to take some of the load 
 We hope to use image processing in the next games because it is a very powerful tool to have, especially during autonomous modes, where
 the robot must be able to aim by itself.
 Our skills we would like to work on are:
- * Getting used to python
+ * Getting used to python (I don't actually know python)
  * Using OpenCV
  * Creating contour reports
  * Sending data either over UDP or NetworkTables
