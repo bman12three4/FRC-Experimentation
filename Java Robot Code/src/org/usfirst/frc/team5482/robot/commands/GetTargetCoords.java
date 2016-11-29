@@ -1,5 +1,10 @@
 package org.usfirst.frc.team5482.robot.commands;
 
+import java.net.DatagramSocket;
+import java.net.SocketException;
+
+import org.usfirst.frc.team5482.robot.Robot;
+
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
@@ -14,10 +19,16 @@ public class GetTargetCoords extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	try {
+    		Robot.socket = new DatagramSocket();
+    	} catch (SocketException ex){
+    		System.out.println("Port occupied.");
+    	}
     }
 
     // Make this return true when this Command no longer needs to run execute()
